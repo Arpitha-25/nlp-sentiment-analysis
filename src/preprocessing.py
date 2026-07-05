@@ -8,13 +8,22 @@ from nltk.corpus import wordnet
 from nltk.stem import WordNetLemmatizer
 from nltk import pos_tag
 
-nltk.download("punkt")
-nltk.download("punkt_tab")
-nltk.download("stopwords")
-nltk.download("wordnet")
-nltk.download("omw-1.4")
-nltk.download("averaged_perceptron_tagger")
-nltk.download("averaged_perceptron_tagger_eng")
+import nltk
+
+resources = [
+    ("tokenizers/punkt", "punkt"),
+    ("corpora/stopwords", "stopwords"),
+    ("corpora/wordnet", "wordnet"),
+    ("corpora/omw-1.4", "omw-1.4"),
+    ("taggers/averaged_perceptron_tagger", "averaged_perceptron_tagger"),
+]
+
+for resource_path, resource_name in resources:
+    try:
+        nltk.data.find(resource_path)
+    except LookupError:
+        nltk.download(resource_name)
+
 
 # Initialize stopwords
 stop_words = set(stopwords.words("english"))
