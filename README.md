@@ -98,13 +98,11 @@ nlp-sentiment-analysis/
 ├── app/
 │   └── app.py
 │
-├── assets/
-│   ├── home.png
-│   ├── positive_prediction.png
-│   └── negative_prediction.png
 │
 ├── data/
-│   └── raw/
+│   └── raw/ 
+│        ├── Train.csv
+│        └── Test.csv
 │
 ├── models/
 │   ├── sentiment_model.pkl
@@ -121,28 +119,6 @@ nlp-sentiment-analysis/
 ├── requirements.txt
 └── README.md
 ```
-
----
-
-## 📷 Screenshots
-
-### Home Page
-
-![Home](assets/home.png)
-
----
-
-### Positive Prediction
-
-![Positive](assets/positive_prediction.png)
-
----
-
-### Negative Prediction
-
-![Negative](assets/negative_prediction.png)
-
----
 
 ## ⚙ Installation
 
