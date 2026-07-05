@@ -13,8 +13,7 @@ Built using **Python, Scikit-learn, TF-IDF, Logistic Regression, NLTK, and Strea
 
 ## 🚀 Live Demo
 
-*(Add your Streamlit link here after deployment)*
-
+(https://nlp-sentiment-analysis-6wsumeu3f2bnkjxqfp83re.streamlit.app/)
 Example:
 
 https://movie-review-sentiment.streamlit.app
