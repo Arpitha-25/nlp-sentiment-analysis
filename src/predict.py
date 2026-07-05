@@ -11,26 +11,36 @@ vectorizer = joblib.load(BASE_DIR / "models" / "tfidf_vectorizer.pkl")
 
 def predict_sentiment(review):
     """
-    Predict sentiment of a movie review.
+    Predict the sentiment of a movie review.
+    Returns:
+        sentiment,
+        confidence,
+        positive_probability,
+        negative_probability
     """
 
-    # Clean the review
     clean_review = preprocess_text(review)
 
-    # Convert to TF-IDF features
     vector = vectorizer.transform([clean_review])
 
-    # Predict sentiment
     prediction = model.predict(vector)[0]
 
-    # Prediction probabilities
     probabilities = model.predict_proba(vector)[0]
 
-    sentiment = "Positive 😊" if prediction == 1 else "Negative 😔"
+    positive_probability = probabilities[1] * 100
+    negative_probability = probabilities[0] * 100
 
-    confidence = probabilities[prediction] * 100
+    sentiment = "Positive" if prediction == 1 else "Negative"
 
-    return sentiment, confidence
+    confidence = max(positive_probability, negative_probability)
+
+    return (
+        sentiment,
+        confidence,
+        positive_probability,
+        negative_probability
+    )
+
 
 if __name__ == "__main__":
 
