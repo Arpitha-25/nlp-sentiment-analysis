@@ -11,12 +11,6 @@ Built using **Python, Scikit-learn, TF-IDF, Logistic Regression, NLTK, and Strea
 
 ---
 
-## 🚀 Live Demo
-
-(https://nlp-sentiment-analysis-6wsumeu3f2bnkjxqfp83re.streamlit.app/)
-
----
-
 ## 📌 Features
 
 - Predicts whether a movie review is Positive or Negative
