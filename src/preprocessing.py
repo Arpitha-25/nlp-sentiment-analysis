@@ -97,8 +97,8 @@ def lemmatize_text(text):
     Perform POS-aware lemmatization.
     """
 
-    words = word_tokenize(text)
-
+    words = word_tokenize(text,preserve_line=True)
+    
     tagged_words = pos_tag(words)
 
     lemmatized_words = []
