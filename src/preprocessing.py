@@ -8,8 +8,6 @@ from nltk.corpus import wordnet
 from nltk.stem import WordNetLemmatizer
 from nltk import pos_tag
 
-import nltk
-
 resources = [
     ("tokenizers/punkt", "punkt"),
     ("tokenizers/punkt_tab", "punkt_tab"),
