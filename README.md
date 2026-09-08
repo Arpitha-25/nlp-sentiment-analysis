@@ -8,7 +8,10 @@
 An end-to-end Natural Language Processing (NLP) web application that classifies IMDb movie reviews as **Positive** or **Negative** using Machine Learning.
 
 Built using **Python, Scikit-learn, TF-IDF, Logistic Regression, NLTK, and Streamlit**.
+---
+## 🚀 Live Demo
 
+👉 [Try the Movie Review Sentiment Analyzer](https://nlp-sentiment-analysis-4zzmwjyjyyfal535papc8g.streamlit.app/)
 ---
 
 ## 📌 Features
